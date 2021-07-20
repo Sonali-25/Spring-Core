@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car" class="com.magic.spring.Car" scope="singleton" autowire="byName" lazy-init="true">
+        <property name="name" value="polo"></property>
+        <property name="model" value="Evoque"></property>
+    </bean>
+
+    <bean id="bike" class="com.magic.spring.Bike">
+        <constructor-arg value="Ktm"/>
+    </bean>
+</beans>
